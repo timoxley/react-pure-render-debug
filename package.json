@@ -1,0 +1,17 @@
+{
+  "name": "react-pure-render-debug",
+  "version": "1.0.0",
+  "description": "a loud pure-render method that makes render failures easier to debug",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "pure",
+    "render",
+    "debug"
+  ],
+  "author": "Tom MacWright",
+  "license": "ISC"
+}
