@@ -13,5 +13,9 @@
     "debug"
   ],
   "author": "Tom MacWright",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tmcw/react-pure-render-debug.git"
+  }
 }
