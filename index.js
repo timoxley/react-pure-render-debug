@@ -1,3 +1,5 @@
+var deepEqual = require('deep-equal');
+
 function shallowEqual(objA, objB, type) {
   if (objA === objB) { return true; }
 
@@ -19,7 +21,11 @@ function shallowEqual(objA, objB, type) {
   var bHasOwnProperty = Object.prototype.hasOwnProperty.bind(objB);
   for (var i = 0; i < keysA.length; i++) {
     if (!bHasOwnProperty(keysA[i]) || objA[keysA[i]] !== objB[keysA[i]]) {
-      console.warn('pure-render-debug(' + type + '): ' + keysA[i] + ' differs');
+      if (deepEqual(objA[i], objB[i])) {
+          console.warn('pure-render-debug(' + type + '): ' + keysA[i] + ' differs. Objects are deep-equal but not same instance.');
+      } else {
+          console.warn('pure-render-debug(' + type + '): ' + keysA[i] + ' differs');
+      }
       return false;
     }
   }

@@ -17,5 +17,8 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:tmcw/react-pure-render-debug.git"
+  },
+  "dependencies": {
+    "deep-equal": "^1.0.0"
   }
 }
